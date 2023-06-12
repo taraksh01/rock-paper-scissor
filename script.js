@@ -1,6 +1,4 @@
 const choices = ['rock', 'paper', 'scissor'];
-const playerSelection = 'rock';
-const computerSelection = getComputerChoice();
 
 function randomNumber(num) {
     return Math.floor(Math.random() * num);
@@ -28,4 +26,31 @@ function playRound(playerSelection, computerSelection) {
     }
 }
 
-console.log(playRound(playerSelection, computerSelection));
+
+function game() {
+    let playerScore = 0;
+    let computerScore = 0;
+    while (playerScore <= 5 && computerScore <= 5) {
+        const playerSelection = prompt("Enter your choice (rock, paper, scissor)").toLowerCase();
+        const computerSelection = getComputerChoice();
+        const play = playRound(playerSelection, computerSelection);
+
+        if (play.substring(4, 5).toLowerCase() === 'w') {
+            playerScore++;
+        } else if (play.substring(4, 5).toLowerCase() === 'l') {
+            computerScore++;
+        }
+
+        console.log(`You selected ${playerSelection}, Computer selected ${computerSelection}`);
+        console.log(`Result ${play}`);
+        console.log(`Your score ${playerScore}, Computer score ${computerScore}`);
+
+        if (playerScore >= 5) {
+            return "You Won the Game!!!";
+        } else if (computerScore >= 5) {
+            return "Computer Won the Game!!!";
+        }
+
+    }
+}
+console.log(game());
