@@ -1,0 +1,59 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(174, 203, 203);
+}
+
+.buttons {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.choice {
+  margin: 20px;
+  padding: 20px;
+  border-radius: 20px;
+  flex: 1 0 80px;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+#rock{
+    background-color: rgb(142, 139, 139);
+    color: whitesmoke;
+    border: 1px solid rgb(67, 59, 59);
+}
+
+#scissor{
+    background-color: silver;
+    color: rgb(6, 31, 55);
+    border: 1px solid rgb(152, 145, 145);
+}
+
+#paper{
+    background-color: antiquewhite;
+    color: black;
+    border: 1px solid rgb(249, 178, 85);
+}
+
+#result {
+  margin: 20px;
+  color: chocolate;
+  font-size: 28px;
+}
+
+.winner {
+  font-size: 40px;
+  color: green;
+  font-family: cursive, "Franklin Gothic Medium", "Arial Narrow", Arial,
+    sans-serif;
+}
