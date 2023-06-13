@@ -56,6 +56,14 @@ function showScore() {
   }
 }
 
+function announceWinner() {
+  if (playerScore >= 5) {
+    winner.textContent = "You Won the Game!!!";
+  } else if (computerScore >= 5) {
+    winner.textContent = "Computer Won the Game!!!";
+  }
+}
+
 if (playerScore < 5 && computerScore < 5) {
   playGame();
 }
