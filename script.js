@@ -44,6 +44,17 @@ function playGame() {
   });
 }
 
+function showScore() {
+  if (result.textContent.substring(4, 5).toLowerCase() === "w") {
+    playerScore++;
+  } else if (result.textContent.substring(4, 5).toLowerCase() === "l") {
+    computerScore++;
+  }
+  score.textContent = `Your Score: ${playerScore} && Computer Score: ${computerScore}`;
+  if (playerScore >= 5 || computerScore >= 5) {
+    announceWinner();
+  }
+}
 
 if (playerScore < 5 && computerScore < 5) {
   playGame();
